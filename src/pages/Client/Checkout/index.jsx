@@ -5,11 +5,11 @@ import MapCheckout from "../../../Components/MapComponent";
 import { ChevronLeft, Dot } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { addOrder } from "../../../store/slices/checkoutSlice";
-import {uuidv4} from "uuid"
+// import {uuidv4} from "uuid"
 function Checkout() {
   const [isObtaining, setIsObtaining] = useState(true);
   // const { v4: uuidv4 } = require("uuid");
-  const uniqueId = uuidv4();
+  // const uniqueId = uuidv4();
   const [errors, setErrors] = useState({ address: ["", "", "", ""] }); // Для хранения ошибок
 
   const [fullname, setFullname] = useState({ name: "", surname: "" });
@@ -33,7 +33,7 @@ function Checkout() {
   );
 
 
-  console.log(uniqueId);
+  // console.log(uniqueId);
   
   function validateFields() {
     const newErrors = {};
