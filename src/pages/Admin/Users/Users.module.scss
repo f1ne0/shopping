@@ -1,0 +1,44 @@
+.item_list {
+  margin-top: 60px;
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  thead {
+    tr{
+      text-align: center;
+    }
+    td {
+      background-color: #7e7e7e;
+      color: #ececec;
+      text-transform: capitalize;
+    
+    }
+  }
+  td,
+  tr {
+    border: 1px solid rgb(73, 73, 73);
+    padding: 10px 15px;
+   
+    img {
+      width: 45px;
+      height: 45px;
+    }
+   
+  }
+}
+
+.avatar_img{
+ text-align: center;     
+}
+.users_title{
+  margin-left: 60px;
+}
+.filter_role{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  a{
+    border: 1px solid #535455;
+  }
+}

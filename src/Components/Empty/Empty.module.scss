@@ -1,0 +1,20 @@
+.empty_box {
+  display: flex;
+  gap: 20px;
+  width: 450px;
+  align-items: center;
+  flex-direction: column;
+
+  p,
+  h2 {
+    text-align: center;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    background-color: #3e4041;
+    border-radius: 10px;
+    padding: 10px 15px;
+  }
+}

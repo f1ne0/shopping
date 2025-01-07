@@ -1,0 +1,16 @@
+.select_role {
+  display: flex;
+  select {
+    width: 200px;
+    background-color: #22a86d;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px; ///=====
+    & > option {
+      background-color: #2e2f33;
+      border: none;
+    }
+  }
+}

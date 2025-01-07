@@ -1,0 +1,18 @@
+.box {
+  display: flex;
+  justify-content: center;
+
+  padding: 30px 10px;
+  min-height: 860px;
+  height: 100%;
+
+  .box_inner {
+    display: grid;
+    grid-template-columns: repeat(4, 309px);
+    gap: 40px;
+  }
+  & > span {
+    margin-top: 180px;
+   
+  }
+}

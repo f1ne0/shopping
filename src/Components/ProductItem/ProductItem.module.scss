@@ -1,0 +1,112 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid #444;
+  height: 482px;
+
+  .box_inner {
+    position: relative;
+    height: 100%;
+    padding: 25px 25px 0px 25px;
+    .fav_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      cursor: pointer;
+      top: 8px;
+      right: 8px;
+      transition: opacity 0.1s;
+      opacity: 0;
+
+      &.liked {
+        opacity: 1;
+    
+        svg {
+          fill: #d92e15;
+          stroke: #d92e15;
+        }
+      }
+    
+      &.not_liked {
+        svg {
+          fill: transparent;
+          stroke: #fff;
+        }
+      }
+    }
+    &:hover .fav_btn {
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
+    .cart_btn {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid rgb(99, 106, 107);
+    }
+    & > a {
+      display: flex;
+      flex-direction: column;
+
+      height: 100%;
+      .item_img {
+        display: inline-block;
+        height: 300px;
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        img {
+          border-radius: 6px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.2s;
+          &:hover {
+            transform: scale(1.15);
+            transition: transform 0.2s;
+          }
+        }
+      }
+      &>div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 10px 0px 10px;
+        // border: 1px solid red;
+        &>nav{
+          display: flex;
+          &>div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            // border: 1px solid green;
+            height: 100%;
+            transform: translate(15px,-35px);
+          
+          }
+        }
+        span{
+          width:360px;
+          display: -webkit-box; /* Используем flex-контейнер */
+          -webkit-line-clamp: 3; /* Ограничение на 2 строки */
+          -webkit-box-orient: vertical; /* Вертикальная ориентация */
+          overflow: hidden; /* Обрезаем текст */
+          text-overflow: ellipsis; /* Добавляем многоточие */
+        }
+      }
+    }
+    p {
+      text-decoration: line-through;
+    }
+  }
+}

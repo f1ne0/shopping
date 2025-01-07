@@ -1,0 +1,82 @@
+.footer {
+
+  margin-top: 150px;
+  height: 360px;
+  width: 100%;
+  background-color: #262b34;
+  .footer_inner {
+    .footer_top {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 90px 30px 15px;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        &>a{
+          h1{
+            color: #fff
+          }
+        }
+        & > p {
+          font-weight: 700;
+          font-size: 14px;
+        }
+        .question {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 16px;
+          & > p {
+            font-size: 14px;
+            color: #ececec;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+
+        & > nav {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: repeat(3, auto);
+          align-items: center;
+          justify-content: start;
+          gap: 12px;
+          width: 341px;
+          height: 183px;
+
+          & > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 54px;
+            height: 53px;
+            width: 144px;
+            border-radius: 12px;
+            background-color: #2c3541;
+            // background-color: #29313c;
+            // background-color: #2a313a;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          li {
+            a {
+              color: #757980;
+              font-size: 14px;
+              font-weight: 500;
+              transition: color 0.15s;
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

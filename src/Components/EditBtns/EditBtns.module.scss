@@ -1,0 +1,21 @@
+.btn_wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  button {
+    height: 26px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #434a59;
+    border-radius: 5px;
+    color: #fff;
+    &:hover {
+      background-color: #525b6e;
+      transition: background-color 0.3s;
+    }
+  }
+  button:nth-child(1) {
+    margin-right: 10px;
+  }
+}

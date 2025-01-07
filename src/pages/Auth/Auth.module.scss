@@ -1,0 +1,128 @@
+.auth {
+  background-color: rgb(19, 19, 19);
+  width: 100vw;
+  height: 100vh;
+  .backBtns {
+    display: flex;
+    padding:10px 20px;
+    & > span {
+      border: 1px solid #5a5d63;
+      color: #bfbfbf;
+      padding: 3px 8px;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      // margin: 20px 15px;
+      &:nth-child(2) {
+        padding: 3px 8px 3px 0px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.box-wrapper {
+  width: 500px;
+  height: 450px;
+  background-color: #0c141e;
+  background-color: rgb(7, 6, 6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px #1414145b;
+  // padding: 65px;
+  display: flex;
+  border-radius: 10px;
+}
+.title-1 {
+  background-color: #00a562;
+  height: 100%;
+  width: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+.box {
+  width: 100%;
+  padding: 0px 50px;
+  margin-top: 65px;
+  & > h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    color: #fff;
+  }
+}
+
+.form-box {
+  display: flex;
+  width: 350px;
+  margin-inline: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 25px;
+  & > input {
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    padding: 10px 5px;
+    color: #eeeeee;
+    background-color: #000;
+    border-bottom: 1px solid #00a562;
+    &::placeholder {
+      font-weight: 300;
+      font-size: 15px;
+    }
+    &:focus {
+      background: rgba(10, 10, 10, 0.8);
+      border-bottom: 1px solid #00fd98;
+      &::placeholder {
+        color: transparent;
+        transition: color 0.3s;
+      }
+    }
+  }
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #00a562;
+  padding: 12px 0;
+  color: #fff;
+  border: none;
+  border-radius: 80px;
+  font-size: 15px;
+  transition: background-color 400ms;
+  margin-top: 50px;
+
+  &:hover {
+    background-color: #01cd7c;
+  }
+  &.submited {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.form-register {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 300;
+  a {
+    color: #00a562;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
