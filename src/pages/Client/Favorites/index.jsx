@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Empty from "../../../Components/Empty";
 import styles from "./Favorites.module.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,14 +19,14 @@ function Favorites() {
 
   return (
     <div className={styles.favorites_box}>
-      <nav className={styles.backBtns}>
-        <span onClick={() => navigate("/")}>Главная</span>
-        <span onClick={() => navigate(-1)}>
-          <ChevronLeft size={18} />
-          Назад
-        </span>
-      </nav>
       <div className="container">
+        <nav className={styles.backBtns}>
+          <span onClick={() => navigate("/")}>Главная</span>
+          <span onClick={() => navigate(-1)}>
+            <ChevronLeft size={18} />
+            Назад
+          </span>
+        </nav>
         {favorites.length < 1 ? (
           <div className={styles.empty_box}>
             <Empty

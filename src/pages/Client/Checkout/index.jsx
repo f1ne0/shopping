@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Checkout.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import MapCheckout from "../../../Components/MapComponent";
-import { ChevronLeft, Dot } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { addOrder } from "../../../store/slices/checkoutSlice";
 // import {uuidv4} from "uuid"
 function Checkout() {
-  const [isObtaining, setIsObtaining] = useState(true);
+  // const [isObtaining, setIsObtaining] = useState(true);
   // const { v4: uuidv4 } = require("uuid");
   // const uniqueId = uuidv4();
   const [errors, setErrors] = useState({ address: ["", "", "", ""] }); // Для хранения ошибок
@@ -33,8 +33,6 @@ function Checkout() {
   );
 
 
-  // console.log(uniqueId);
-  
   function validateFields() {
     const newErrors = {};
 
@@ -370,8 +368,24 @@ function Checkout() {
                 Оформить покупку
               </button>
               <p>
-                Подтверждая заказ, я принимаю условия Пользовательского
-                соглашения
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  style={{
+                    marginRight: "10px",
+                  }}
+                />
+                <label
+                  style={{
+                    display: "inline-block",
+                  }}
+                  htmlFor="checkbox"
+                >
+                  <p>
+                    Подтверждая заказ, я принимаю условия Пользовательского
+                    соглашения
+                  </p>
+                </label>
               </p>
             </div>
             <div className={styles.checkout_right}>

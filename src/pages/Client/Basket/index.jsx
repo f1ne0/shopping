@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Empty from "../../../Components/Empty";
 import styles from "./Basket.module.scss";
 import { ChevronLeft, Minus, Plus, Trash2 } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteAll,
@@ -31,15 +31,14 @@ function Basket() {
 
   return (
     <div className="container">
-       <nav className={styles.backBtns}>
-          <span onClick={() => navigate("/")}>Главная</span>
-          <span onClick={() => navigate(-1)}>
-            <ChevronLeft size={18} />
-            Назад
-          </span>
-        </nav>
+      <nav className={styles.backBtns}>
+        <span onClick={() => navigate("/")}>Главная</span>
+        <span onClick={() => navigate(-1)}>
+          <ChevronLeft size={18} />
+          Назад
+        </span>
+      </nav>
       <div className={styles.basket_box}>
-       
         {baskets.length < 1 ? (
           <div className={styles.empty_box}>
             <Empty

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import {
@@ -39,13 +39,11 @@ function Header() {
 
   useEffect(() => {
     getCategories();
-    setIsQuitBtn(false)
-   
+    setIsQuitBtn(false);
   }, []);
 
-
   return (
-    <div className={styles.header} >
+    <div className={styles.header}>
       <div className={styles.header_top}>
         <div className="container">
           <div className={styles.header_top_inner}>

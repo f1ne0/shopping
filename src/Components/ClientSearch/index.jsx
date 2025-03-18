@@ -1,12 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useDebounce } from "use-debounce";
+import { useEffect, useState } from "react";
+// import { useDebounce } from "use-debounce";
 import styles from "./ClientSearch.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 const api = "https://api.escuelajs.co/api/v1";
 
-function ClientSearch({}) {
+function ClientSearch() {
   const [searchValue, setSearchValue] = useState("");
   const [products, setProducts] = useState([]);
   const [isBlur, setIsBlur] = useState(false);
@@ -26,7 +26,7 @@ function ClientSearch({}) {
   function handleShowProduct(id) {
     navigate(`/product/${id}`);
     setIsBlur(false);
-     document.body.style.overflowY = "";
+    document.body.style.overflowY = "";
   }
 
   return (
