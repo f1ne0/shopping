@@ -34,15 +34,15 @@ export const routes = createBrowserRouter([
         element: <ClientProducts />,
       },
       {
-        path: "/basket",
+        path: "basket",
         element: <Basket />,
       },
       {
-        path: "/favorites",
+        path: "favorites",
         element: <Favorites />,
       },
       {
-        path: "/product/:id",
+        path: "product/:id",
         element: <ShowProductItem />,
       },
     ],
